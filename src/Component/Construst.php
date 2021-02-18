@@ -11,10 +11,10 @@ final class Construst
 
     public function __invoke(ClassValueObject $classValueObject): void
     {
-        $class = $classValueObject->getClass();
+        $classType = $classValueObject->getClass();
         $setting = $classValueObject->getSetting();
 
-        $method = $class->addMethod('__construct');
+        $method = $classType->addMethod('__construct');
 
         $allowClass = var_export($setting->allowClass(), true);
         $serialize = serialize($classValueObject->getData());

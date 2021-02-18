@@ -19,8 +19,8 @@ final class ClassProperty
 
     public function __invoke(ClassValueObject $classValueObject): void
     {
-        $class = $classValueObject->getClass();
-        $class->addProperty(self::DATA_PROPERTY)
+        $classType = $classValueObject->getClass();
+        $classType->addProperty(self::DATA_PROPERTY)
             ->setType(self::DATA_PROPERTY_TYPE)
             ->setPrivate();
     }

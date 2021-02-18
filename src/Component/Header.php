@@ -15,8 +15,8 @@ final class Header
 
     public function __invoke(ClassValueObject $classValueObject): void
     {
-        $file = $classValueObject->getFile();
-        $file->addComment(self::FILE_COMMENT);
-        $file->setStrictTypes();
+        $phpFile = $classValueObject->getFile();
+        $phpFile->addComment(self::FILE_COMMENT);
+        $phpFile->setStrictTypes();
     }
 }

@@ -45,9 +45,9 @@ final class Generator implements GeneratorInterface
 
     private function setGetData(ClassValueObject $classValueObject): void
     {
-        $class = $classValueObject->getClass();
+        $classType = $classValueObject->getClass();
 
-        $method = $class->addMethod('getData');
+        $method = $classType->addMethod('getData');
         $method->setBody(
             'return $this->data;'
         );
