@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * This file is auto-generated.
+ */
+
+declare(strict_types=1);
+
+namespace Example\ConfigObject;
+
+class Simple
+{
+    private mixed $data;
+
+    public function __construct()
+    {
+        $this->data = \unserialize('a:3:{s:1:"a";i:1;s:1:"b";b:1;s:1:"c";O:32:"Ilex\ConfigObject\Tests\Fake\One":0:{}}',["allowed_classes" => array (
+          0 => 'Ilex\\ConfigObject\\Tests\\Fake\\One',
+        )]);
+    }
+
+    public function getData()
+    {
+        return $this->data;
+    }
+}

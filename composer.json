@@ -1,0 +1,40 @@
+{
+    "name": "ilexn/config-object",
+    "type": "library",
+    "description": "Config Object",
+    "license": "MIT",
+    "keywords": [
+        "config"
+    ],
+    "authors": [
+        {
+            "name": "iLexN",
+            "email": "ilex.job@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "nette/php-generator": "^3.5"
+    },
+    "require-dev": {
+        "infection/infection": "^0.20.2",
+        "phpunit/phpunit": "^9.5"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Ilex\\ConfigObject\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ilex\\ConfigObject\\Tests\\": "tests",
+            "Example\\ConfigObject\\" : "example"
+        }
+    },
+    "scripts": {
+        "test-test": "vendor/bin/infection --threads=4"
+    }
+}
