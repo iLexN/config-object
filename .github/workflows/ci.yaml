@@ -71,6 +71,9 @@ jobs:
       - name: Composer install
         run: composer install --ansi
 
+      - name: Create folder
+        run: mkdir example
+
       #      - name: Code style check
       #        run: composer cs-check
 
