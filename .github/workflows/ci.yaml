@@ -33,6 +33,9 @@ jobs:
       - name: Composer install
         run: composer install --ansi
 
+      - name: Create folder
+        run: mkdir example
+
       - name: Execute tests
         run: vendor/bin/phpunit --coverage-clover build/logs/clover.xml
 
