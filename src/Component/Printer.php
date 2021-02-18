@@ -10,9 +10,9 @@ use Nette\PhpGenerator\PsrPrinter;
 final class Printer
 {
 
-    public function __invoke(ClassValueObject $fileClass): string
+    public function __invoke(ClassValueObject $classValueObject): string
     {
-        $printer = new PsrPrinter;// 4 spaces indentation
-        return $printer->printFile($fileClass->getFile());
+        $psrPrinter = new PsrPrinter;// 4 spaces indentation
+        return $psrPrinter->printFile($classValueObject->getFile());
     }
 }

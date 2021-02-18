@@ -13,43 +13,39 @@ use Ilex\ConfigObject\Error\ClassValueObject;
 final class Generator implements GeneratorInterface
 {
 
-    public function __construct()
-    {
-    }
-
     public function create(SettingInterface $setting): string
     {
-        $fileClass = new ClassValueObject($setting);
+        $classValueObject = new ClassValueObject($setting);
 
-        $this->setHeader($fileClass);
-        $this->setClassProperty($fileClass);
-        $this->setConstruct($fileClass);
-        $this->setGetData($fileClass);
+        $this->setHeader($classValueObject);
+        $this->setClassProperty($classValueObject);
+        $this->setConstruct($classValueObject);
+        $this->setGetData($classValueObject);
 
-        return $this->print($fileClass);
+        return $this->print($classValueObject);
     }
 
-    private function setHeader(ClassValueObject $fileClass): void
+    private function setHeader(ClassValueObject $classValueObject): void
     {
         $header = new Header();
-        $header($fileClass);
+        $header($classValueObject);
     }
 
-    private function setClassProperty(ClassValueObject $fileClass): void
+    private function setClassProperty(ClassValueObject $classValueObject): void
     {
         $classProperty = new ClassProperty();
-        $classProperty($fileClass);
+        $classProperty($classValueObject);
     }
 
-    private function setConstruct(ClassValueObject $fileClass): void
+    private function setConstruct(ClassValueObject $classValueObject): void
     {
         $construst = new Construst();
-        $construst($fileClass);
+        $construst($classValueObject);
     }
 
-    private function setGetData(ClassValueObject $fileClass): void
+    private function setGetData(ClassValueObject $classValueObject): void
     {
-        $class = $fileClass->getClass();
+        $class = $classValueObject->getClass();
 
         $method = $class->addMethod('getData');
         $method->setBody(
@@ -57,9 +53,9 @@ final class Generator implements GeneratorInterface
         );
     }
 
-    private function print(ClassValueObject $fileClass): string
+    private function print(ClassValueObject $classValueObject): string
     {
         $printer = new Printer();
-        return $printer($fileClass);
+        return $printer($classValueObject);
     }
 }

@@ -7,17 +7,14 @@ namespace Ilex\ConfigObject;
 final class GeneratorManager
 {
     public function __construct(
-        private CreateMode $mode,
+        private CreateMode $createMode,
         private GeneratorInterface $generator,
     ) {
     }
 
-    /**
-     * @param SettingInterface $setting
-     */
     public function generate(SettingInterface $setting): void
     {
-        $mode = $this->mode->getMode();
+        $mode = $this->createMode->getMode();
 
         if ($mode === CreateMode::FILE_ONLY) {
             return;

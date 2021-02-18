@@ -23,8 +23,8 @@ final class ClassValueObject
     private function init(): void
     {
         $this->file = new PhpFile;
-        $namespace = $this->file->addNamespace($this->setting->getTargetNamespace());
-        $this->class = $namespace->addClass($this->setting->getTargetClassName());
+        $phpNamespace = $this->file->addNamespace($this->setting->getTargetNamespace());
+        $this->class = $phpNamespace->addClass($this->setting->getTargetClassName());
         $this->data = $this->setting->getData();
     }
 

@@ -6,6 +6,9 @@ namespace Ilex\ConfigObject;
 
 abstract class Setting implements SettingInterface
 {
+    /**
+     * @var string
+     */
     private const FILE_EXT = '.php';
 
     abstract public function getTargetPath(): string;

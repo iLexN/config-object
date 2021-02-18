@@ -8,11 +8,14 @@ use Ilex\ConfigObject\Error\ClassValueObject;
 
 final class Header
 {
+    /**
+     * @var string
+     */
     private const FILE_COMMENT = 'This file is auto-generated.';
 
-    public function __invoke(ClassValueObject $fileClass): void
+    public function __invoke(ClassValueObject $classValueObject): void
     {
-        $file = $fileClass->getFile();
+        $file = $classValueObject->getFile();
         $file->addComment(self::FILE_COMMENT);
         $file->setStrictTypes();
     }

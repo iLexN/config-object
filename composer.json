@@ -41,6 +41,7 @@
         "test-test": "vendor/bin/infection --threads=4",
         "bug-check": "phpstan analyse -l max src",
         "psalm": "psalm",
-        "rector-check": "rector process src --config rector-ci.php --dry-run"
+        "rector-check": "rector process src --config rector-ci.php --dry-run",
+        "rector-fix": "rector process src --config rector-ci.php"
     }
 }
