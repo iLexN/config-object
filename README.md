@@ -65,3 +65,5 @@ $manager->generate($setting);
 $g = new GenNameCreate();
 var_dump($g->getData()->getTargetPath());
 ```
+## Todo
+[] add general method.
