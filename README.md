@@ -1,5 +1,5 @@
 # config-object
-> Simple Object to build graphql payload, and use your favourite http client to send.
+> Generator for create data value object.
 
 [![Latest Stable Version](https://poser.pugx.org/ilexn/config-object/v/stable)](https://packagist.org/packages/ilexn/config-object)
 [![Total Downloads](https://poser.pugx.org/ilexn/config-object/downloads)](https://packagist.org/packages/ilexn/config-object)
