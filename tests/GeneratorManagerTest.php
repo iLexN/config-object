@@ -28,6 +28,9 @@ class GeneratorManagerTest extends TestCase
         if (file_exists($each->getFilePath())) {
             unlink($each->getFilePath());
         }
+        if (file_exists($notAllow->getFilePath())) {
+            unlink($notAllow->getFilePath());
+        }
     }
 
     public function testCreate(): void
@@ -134,7 +137,9 @@ class GeneratorManagerTest extends TestCase
 
     public function testNotAllowClass(): void
     {
-        $mode = CreateMode::oneTime();
+        $this->expectErrorMessageMatches('/unserialize/');
+
+        $mode = CreateMode::each();
         $generator = new Generator();
         $notAllow = new SimpleNotAllowClass();
 
@@ -145,6 +150,6 @@ class GeneratorManagerTest extends TestCase
         $manager->generate($notAllow);
 
         $class = new SimpleNotAllow();
-        $r = $class->getData()['b']->getTargetPath();
+        $class->getData()['c']->getTargetPath();
     }
 }

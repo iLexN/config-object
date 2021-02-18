@@ -26,7 +26,11 @@ class SimpleNotAllowClass extends Setting
 
     public function getData(): array
     {
-        return ['a' => 1, 'b' => new One()];
+        return [
+            'a' => 1,
+            'b' => true,
+            'c' => new One(),
+        ];
     }
 
     public function allowClass(): array
