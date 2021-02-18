@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Ilex\ConfigObject\Error;
 
-class ConfigBuilderError extends \Exception
+final class ConfigBuilderError extends \Exception
 {
 
-    public static function FileNotFound(string $path): static
+    public static function FileNotFound(string $path): self
     {
         $msg = 'File not found in `' . $path . '`';
-        return new static(message: $msg);
+        return new self(message: $msg);
     }
 }

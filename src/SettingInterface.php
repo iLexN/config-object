@@ -14,6 +14,9 @@ interface SettingInterface
 
     public function getData(): mixed;
 
+    /**
+     * @return array<string>
+     */
     public function allowClass(): array;
 
     public function getFilePath(): string;

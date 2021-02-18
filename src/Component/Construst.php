@@ -6,7 +6,7 @@ namespace Ilex\ConfigObject\Component;
 
 use Ilex\ConfigObject\Error\ClassValueObject;
 
-class Construst
+final class Construst
 {
 
     public function __invoke(ClassValueObject $fileClass): void

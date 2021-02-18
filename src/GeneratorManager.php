@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Ilex\ConfigObject;
 
-class GeneratorManager
+final class GeneratorManager
 {
     public function __construct(
         private CreateMode $mode,

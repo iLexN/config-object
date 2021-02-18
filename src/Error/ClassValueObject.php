@@ -8,7 +8,7 @@ use Ilex\ConfigObject\SettingInterface;
 use Nette\PhpGenerator\ClassType;
 use Nette\PhpGenerator\PhpFile;
 
-class ClassValueObject
+final class ClassValueObject
 {
     private PhpFile $file;
     private ClassType $class;

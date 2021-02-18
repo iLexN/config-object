@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Ilex\ConfigObject;
 
-class CreateMode
+final class CreateMode
 {
     /**
      * create every time
@@ -31,18 +31,18 @@ class CreateMode
         return $this->mode;
     }
 
-    public static function each(): static
+    public static function each(): self
     {
-        return new static(self::DEV);
+        return new self(self::DEV);
     }
 
-    public static function oneTime(): static
+    public static function oneTime(): self
     {
-        return new static (self::FILE_NOT_EXIST);
+        return new self (self::FILE_NOT_EXIST);
     }
 
-    public static function notCreate(): static
+    public static function notCreate(): self
     {
-        return new static(self::FILE_ONLY);
+        return new self(self::FILE_ONLY);
     }
 }

@@ -7,7 +7,7 @@ namespace Ilex\ConfigObject\Component;
 use Ilex\ConfigObject\Error\ClassValueObject;
 use Nette\PhpGenerator\PsrPrinter;
 
-class Printer
+final class Printer
 {
 
     public function __invoke(ClassValueObject $fileClass): string

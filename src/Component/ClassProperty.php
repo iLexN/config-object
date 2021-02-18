@@ -6,7 +6,7 @@ namespace Ilex\ConfigObject\Component;
 
 use Ilex\ConfigObject\Error\ClassValueObject;
 
-class ClassProperty
+final class ClassProperty
 {
     private const DATA_PROPERTY = 'data';
     private const DATA_PROPERTY_TYPE = 'mixed';

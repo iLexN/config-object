@@ -10,7 +10,7 @@ use Ilex\ConfigObject\Component\Header;
 use Ilex\ConfigObject\Component\Printer;
 use Ilex\ConfigObject\Error\ClassValueObject;
 
-class Generator implements GeneratorInterface
+final class Generator implements GeneratorInterface
 {
 
     public function __construct()
