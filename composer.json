@@ -14,14 +14,14 @@
     ],
     "require": {
         "php": ">=8.0",
-        "nette/php-generator": "^3.5",
-        "phpstan/phpstan": "^0.12.80",
-        "rector/rector": "^0.9.31",
-        "vimeo/psalm": "^4.6"
+        "nette/php-generator": "^3.5"
     },
     "require-dev": {
         "infection/infection": "^0.21.2",
-        "phpunit/phpunit": "^9.5"
+        "phpstan/phpstan": "^0.12.80",
+        "phpunit/phpunit": "^9.5",
+        "rector/rector": "^0.9.31",
+        "vimeo/psalm": "^4.6"
     },
     "config": {
         "sort-packages": true
