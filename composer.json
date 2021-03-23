@@ -20,7 +20,7 @@
         "infection/infection": "^0.21.4",
         "phpstan/phpstan": "^0.12.81",
         "phpunit/phpunit": "^9.5",
-        "rector/rector": "^0.9.31",
+        "rector/rector": "^0.10.1",
         "vimeo/psalm": "^4.6"
     },
     "config": {
