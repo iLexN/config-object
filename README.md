@@ -65,5 +65,17 @@ $manager->generate($setting);
 $g = new GenNameCreate();
 var_dump($g->getData()->getTargetPath());
 ```
+
+## Benchmark
+
+
+| benchmark     | subject   | set | revs | its | mem_peak | mode      | rstdev |
+|---------------|-----------|-----|------|-----|----------|-----------|--------|
+| JsonBenchmark | benchBase | 0   | 1000 | 5   | 2.417mb  | 25.600μs  | ±1.27% |
+| JsonBenchmark | benchEach | 0   | 1000 | 5   | 5.216mb  | 287.363μs | ±0.73% |
+| JsonBenchmark | benchOnce | 0   | 1000 | 5   | 2.417mb  | 5.764μs   | ±2.15% |
+| JsonBenchmark | benchNone | 0   | 1000 | 5   | 2.417mb  | 1.923μs   | ±3.01% |
+
+
 ## Todo
 [] add general method.

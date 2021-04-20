@@ -90,3 +90,6 @@ jobs:
         env:
           INFECTION_BADGE_API_KEY: ${{ secrets.INFECTION_BADGE_API_KEY }}
         run: vendor/bin/infection --threads=4 -s
+
+      - name: Benchmark
+        run: composer benchmark
