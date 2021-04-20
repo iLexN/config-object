@@ -17,12 +17,12 @@
         "nette/php-generator": "^3.5"
     },
     "require-dev": {
-        "infection/infection": "^0.20.2",
+        "infection/infection": "^0.21.5",
         "phpbench/phpbench": "1.0.0-beta1",
+        "phpstan/phpstan": "^0.12.83",
         "phpunit/phpunit": "^9.5",
-        "phpstan/phpstan": "^0.12.77",
-        "rector/rector": "^0.9.29",
-        "vimeo/psalm": "^4.6"
+        "rector/rector": "^0.10.6",
+        "vimeo/psalm": "^4.7"
     },
     "config": {
         "sort-packages": true
