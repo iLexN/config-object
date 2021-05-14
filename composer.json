@@ -17,7 +17,7 @@
         "nette/php-generator": "^3.5"
     },
     "require-dev": {
-        "infection/infection": "^0.22.1",
+        "infection/infection": "^0.23.0",
         "phpbench/phpbench": "1.0.1",
         "phpstan/phpstan": "^0.12.85",
         "phpunit/phpunit": "^9.5",
