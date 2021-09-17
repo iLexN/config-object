@@ -11,7 +11,9 @@ use Nette\PhpGenerator\PhpFile;
 final class ClassValueObject
 {
     private PhpFile $file;
+
     private ClassType $class;
+
     private mixed $data;
 
     public function __construct(

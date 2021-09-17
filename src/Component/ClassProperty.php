@@ -12,6 +12,7 @@ final class ClassProperty
      * @var string
      */
     private const DATA_PROPERTY = 'data';
+
     /**
      * @var string
      */

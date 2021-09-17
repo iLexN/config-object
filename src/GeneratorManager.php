@@ -35,6 +35,7 @@ final class GeneratorManager
         if (\file_exists($file)) {
             return;
         }
+
         $this->create($setting);
     }
 
