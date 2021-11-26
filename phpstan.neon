@@ -1,0 +1,7 @@
+parameters:
+    level: max
+    paths:
+        - src
+    ignoreErrors:
+        # phpstan not support 8.1 enum
+        - '#Access to undefined constant Ilex\\ConfigObject\\CreateMode::(.*)#'
