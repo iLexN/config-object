@@ -17,7 +17,7 @@ final class ClassValueObject
     private mixed $data;
 
     public function __construct(
-        private SettingInterface $setting,
+        private readonly SettingInterface $setting,
     ) {
         $this->init();
     }

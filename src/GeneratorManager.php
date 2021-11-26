@@ -7,8 +7,8 @@ namespace Ilex\ConfigObject;
 final class GeneratorManager
 {
     public function __construct(
-        private CreateMode $createMode,
-        private GeneratorInterface $generator,
+        private readonly CreateMode $createMode,
+        private readonly GeneratorInterface $generator,
     ) {
     }
 

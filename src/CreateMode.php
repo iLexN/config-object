@@ -10,22 +10,22 @@ final class CreateMode
      * create every time
      * @var string
      */
-    public const DEV = 'dev';
+    public final const DEV = 'dev';
 
     /**
      * create only when file not exist
      * @var string
      */
-    public const FILE_NOT_EXIST = 'exist';
+    public final const FILE_NOT_EXIST = 'exist';
 
     /**
      * Not create, use file directly
      * @var string
      */
-    public const FILE_ONLY = 'file';
+    public final const FILE_ONLY = 'file';
 
     private function __construct(
-        private string $mode,
+        private readonly string $mode,
     ) {
     }
 
