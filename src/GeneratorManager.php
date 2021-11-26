@@ -14,7 +14,7 @@ final class GeneratorManager
 
     public function generate(SettingInterface $setting): void
     {
-        $mode = $this->createMode->getMode();
+        $mode = $this->createMode;
 
         if ($mode === CreateMode::FILE_ONLY) {
             return;

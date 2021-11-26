@@ -4,48 +4,24 @@ declare(strict_types=1);
 
 namespace Ilex\ConfigObject;
 
-final class CreateMode
+enum CreateMode
 {
-    /**
-     * create every time
-     * @var string
-     */
-    public final const DEV = 'dev';
-
-    /**
-     * create only when file not exist
-     * @var string
-     */
-    public final const FILE_NOT_EXIST = 'exist';
-
-    /**
-     * Not create, use file directly
-     * @var string
-     */
-    public final const FILE_ONLY = 'file';
-
-    private function __construct(
-        private readonly string $mode,
-    ) {
-    }
-
-    public function getMode(): string
-    {
-        return $this->mode;
-    }
+    case DEV;
+    case FILE_NOT_EXIST;
+    case FILE_ONLY;
 
     public static function each(): self
     {
-        return new self(self::DEV);
+        return self::DEV;
     }
 
     public static function oneTime(): self
     {
-        return new self (self::FILE_NOT_EXIST);
+        return self::FILE_NOT_EXIST;
     }
 
     public static function notCreate(): self
     {
-        return new self(self::FILE_ONLY);
+        return self::FILE_ONLY;
     }
 }
