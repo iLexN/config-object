@@ -10,18 +10,18 @@ class ConfigModeTest extends TestCase
     public function testModeOne(): void
     {
         $mode = CreateMode::each();
-        self::assertEquals(CreateMode::DEV, $mode);
+        self::assertEquals(CreateMode::Dev, $mode);
     }
 
     public function testModeTwo(): void
     {
         $mode = CreateMode::oneTime();
-        self::assertEquals(CreateMode::FILE_NOT_EXIST, $mode);
+        self::assertEquals(CreateMode::FileNotExist, $mode);
     }
 
     public function testModeThree(): void
     {
         $mode = CreateMode::notCreate();
-        self::assertEquals(CreateMode::FILE_ONLY, $mode);
+        self::assertEquals(CreateMode::FileOnly, $mode);
     }
 }

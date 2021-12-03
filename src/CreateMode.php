@@ -6,22 +6,22 @@ namespace Ilex\ConfigObject;
 
 enum CreateMode
 {
-    case DEV;
-    case FILE_NOT_EXIST;
-    case FILE_ONLY;
+    case Dev;
+    case FileNotExist;
+    case FileOnly;
 
     public static function each(): self
     {
-        return self::DEV;
+        return self::Dev;
     }
 
     public static function oneTime(): self
     {
-        return self::FILE_NOT_EXIST;
+        return self::FileNotExist;
     }
 
     public static function notCreate(): self
     {
-        return self::FILE_ONLY;
+        return self::FileOnly;
     }
 }

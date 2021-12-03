@@ -16,11 +16,11 @@ final class GeneratorManager
     {
         $mode = $this->createMode;
 
-        if ($mode === CreateMode::FILE_ONLY) {
+        if ($mode === CreateMode::FileOnly) {
             return;
         }
 
-        if ($mode === CreateMode::FILE_NOT_EXIST) {
+        if ($mode === CreateMode::FileNotExist) {
             $this->one($setting);
             return;
         }
