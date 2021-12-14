@@ -5,8 +5,8 @@
 [![Total Downloads](https://poser.pugx.org/ilexn/config-object/downloads)](https://packagist.org/packages/ilexn/config-object)
 
 ![GitHub Action](https://github.com/iLexN/config-object/workflows/CI%20Check/badge.svg)
-[![Coverage Status](https://coveralls.io/repos/github/iLexN/config-object/badge.svg?branch=master)](https://coveralls.io/github/iLexN/config-object?branch=master)
-[![Infection MSI](https://badge.stryker-mutator.io/github.com/iLexN/config-object/master)](https://infection.github.io)
+[![Coverage Status](https://coveralls.io/repos/github/iLexN/config-object/badge.svg?branch=main)](https://coveralls.io/github/iLexN/config-object?branch=main)
+[![Infection MSI](https://badge.stryker-mutator.io/github.com/iLexN/config-object/main)](https://infection.github.io)
 
 ## Installation
 ```sh
